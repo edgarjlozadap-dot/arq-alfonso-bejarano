@@ -1063,7 +1063,6 @@ body {
 #incorrectos .incorrect-visual  { height: 62px; margin-bottom: 6px; padding: 8px; }
 #incorrectos .incorrect-card p  { font-size: 0.68rem; line-height: 1.35; }
 #incorrectos .incorrect-badge   { width: 16px; height: 16px; font-size: 0.55rem; top: 4px; right: 4px; }
-#incorrectos .section-label     { font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; }
 
 /* ══════════════════════════════════════════════════════
    SECCIÓN 10 — APLICACIONES
