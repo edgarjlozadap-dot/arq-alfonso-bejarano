@@ -1548,15 +1548,51 @@ body[data-theme="grises"] {
   --gray-soft:      #D8D0C8;
 }
 
-/* ── RESPONSIVE ────────────────────────────────────── */
+/* ── RESPONSIVE ── 1024px ───────────────────────────── */
+@media (max-width: 1024px) {
+  #aplicaciones .mockups-grid  { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .logo-showcase               { gap: 40px; }
+  .logo-display                { padding: 40px; }
+}
+
+/* ── RESPONSIVE ── 900px ────────────────────────────── */
+@media (max-width: 900px) {
+  .logo-display                { padding: 28px 20px; }
+  .grid-container              { padding: 30px; }
+  .construction-grid           { gap: 30px; }
+  .logo-showcase               { grid-template-columns: 1fr; }
+}
+
+/* ── RESPONSIVE ── 768px ────────────────────────────── */
+@media (max-width: 768px) {
+  .section                     { padding: 80px 5vw; }
+  .section-header              { margin-bottom: 40px; }
+  .construction-grid           { grid-template-columns: 1fr; }
+  #aplicaciones .mockups-grid  { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  #aplicaciones .stamp-svg     { width: 100px; height: 100px; }
+  #aplicaciones .sm-cover      { height: 72px; }
+  .theme-switcher              { top: 12px; right: 12px; min-width: 130px; padding: 10px 12px 8px; }
+  .side-nav                    { right: 14px; gap: 8px; }
+}
+
+/* ── RESPONSIVE ── 640px (mobile) ───────────────────── */
 @media (max-width: 640px) {
-  .section { padding: 80px 4vw; }
-  .side-nav { display: none; }
+  .section                     { padding: 60px 4vw; }
+  .side-nav                    { display: none; }
   .philosophy-grid,
   .variants-grid,
   .incorrect-grid,
-  .mockups-grid { grid-template-columns: 1fr; }
-  .type-grid    { grid-template-columns: 1fr; }
-  .cover-title  { font-size: 3.5rem; }
-  .business-card { max-width: 100%; }
+  .mockups-grid                { grid-template-columns: 1fr; }
+  .type-grid                   { grid-template-columns: 1fr; }
+  .business-card               { max-width: 100%; }
+  .cover-content               { padding: 40px 5vw; }
+  .section-label               { display: none; }
+  #aplicaciones                { padding: 40px 4vw; }
+  #aplicaciones .mockups-grid  { grid-template-columns: 1fr; }
+  #aplicaciones .section-title { font-size: clamp(1.4rem, 5vw, 2rem); }
+  .theme-switcher              { top: 8px; right: 8px; min-width: 0; padding: 8px 10px; gap: 1px; }
+  .theme-switcher-title        { display: none; }
+  .theme-btn                   { padding: 5px 6px; gap: 7px; }
+  .theme-swatch                { width: 20px; height: 12px; }
+  .theme-name                  { font-size: 0.6rem; }
 }
