@@ -144,26 +144,54 @@
     });
   });
 
-  // ── KEYBOARD NAVIGATION ────────────────────────────
-  const sectionIds = Array.from(sections).map((s) => s.id);
-  let currentIdx   = 0;
+  // ── SECTION NAVIGATION (scroll · keyboard · touch) ─
+  const sectionIds  = Array.from(sections).map((s) => s.id);
+  let currentIdx    = 0;
+  let isNavigating  = false;
+  const NAV_COOLDOWN = 900; // ms — match smooth-scroll duration
 
+  function goToSection(idx) {
+    idx = Math.min(Math.max(idx, 0), sectionIds.length - 1);
+    if (idx === currentIdx && isNavigating) return;
+    isNavigating = true;
+    currentIdx   = idx;
+    document.getElementById(sectionIds[idx])
+      .scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => { isNavigating = false; }, NAV_COOLDOWN);
+  }
+
+  // Keyboard
   document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowDown' || e.key === 'PageDown') {
       e.preventDefault();
-      currentIdx = Math.min(currentIdx + 1, sectionIds.length - 1);
-      document.getElementById(sectionIds[currentIdx])
-        .scrollIntoView({ behavior: 'smooth', block: 'start' });
+      goToSection(currentIdx + 1);
     }
     if (e.key === 'ArrowUp' || e.key === 'PageUp') {
       e.preventDefault();
-      currentIdx = Math.max(currentIdx - 1, 0);
-      document.getElementById(sectionIds[currentIdx])
-        .scrollIntoView({ behavior: 'smooth', block: 'start' });
+      goToSection(currentIdx - 1);
     }
   });
 
-  // Update currentIdx on section visibility
+  // Mouse wheel — one section per scroll event
+  window.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    if (isNavigating) return;
+    goToSection(currentIdx + (e.deltaY > 0 ? 1 : -1));
+  }, { passive: false });
+
+  // Touch swipe
+  let touchStartY = 0;
+  window.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  window.addEventListener('touchend', (e) => {
+    if (isNavigating) return;
+    const delta = touchStartY - e.changedTouches[0].clientY;
+    if (Math.abs(delta) < 50) return;
+    goToSection(currentIdx + (delta > 0 ? 1 : -1));
+  }, { passive: true });
+
+  // Keep currentIdx in sync with visible section
   const keyObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
