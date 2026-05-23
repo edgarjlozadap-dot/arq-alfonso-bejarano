@@ -1395,6 +1395,11 @@ body {
   text-align: right;
 }
 
+/* ── SECCIÓN 7 — DOS PANTALLAS (dos scrolls) ─────── */
+#tipografia           { min-height: 200vh; align-items: flex-start; }
+#tipografia .type-grid { min-height: calc(100vh - 200px); align-content: center; }
+#tipografia-p2        { display: block; height: 0; pointer-events: none; }
+
 /* ── SECCIÓN 10 — AJUSTE PARA CABER EN UN VIEWPORT ── */
 #aplicaciones { padding: 50px 5vw; }
 #aplicaciones .section-title   { font-size: clamp(1.6rem, 2.5vw, 2.8rem); }

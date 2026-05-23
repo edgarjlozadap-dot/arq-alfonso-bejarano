@@ -146,16 +146,22 @@
 
   // ── SECTION NAVIGATION (scroll · keyboard · touch) ─
   const sectionIds  = Array.from(sections).map((s) => s.id);
+  // navPoints adds an extra stop inside #tipografia so it needs 2 scrolls
+  const navPoints   = sectionIds.reduce((acc, id) => {
+    acc.push(id);
+    if (id === 'tipografia') acc.push('tipografia-p2');
+    return acc;
+  }, []);
   let currentIdx    = 0;
   let isNavigating  = false;
   const NAV_COOLDOWN = 900; // ms — match smooth-scroll duration
 
   function goToSection(idx) {
-    idx = Math.min(Math.max(idx, 0), sectionIds.length - 1);
+    idx = Math.min(Math.max(idx, 0), navPoints.length - 1);
     if (idx === currentIdx && isNavigating) return;
     isNavigating = true;
     currentIdx   = idx;
-    document.getElementById(sectionIds[idx])
+    document.getElementById(navPoints[idx])
       .scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     // Release guard when scroll animation ends (fallback: NAV_COOLDOWN)
@@ -201,7 +207,7 @@
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const idx = sectionIds.indexOf(entry.target.id);
+          const idx = navPoints.indexOf(entry.target.id);
           if (idx !== -1) currentIdx = idx;
         }
       });
