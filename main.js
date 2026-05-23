@@ -179,6 +179,9 @@
 
     if (idx === navPoints.length) {
       window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    } else if (navPoints[idx] === 'tipografia-p2') {
+      const sec = document.getElementById('tipografia');
+      window.scrollTo({ top: sec.offsetTop + sec.offsetHeight - window.innerHeight, behavior: 'smooth' });
     } else {
       document.getElementById(navPoints[idx])
         .scrollIntoView({ behavior: 'smooth', block: 'start' });
