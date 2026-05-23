@@ -172,12 +172,17 @@
   const NAV_COOLDOWN = 900; // ms — match smooth-scroll duration
 
   function goToSection(idx) {
-    idx = Math.min(Math.max(idx, 0), navPoints.length - 1);
+    idx = Math.min(Math.max(idx, 0), navPoints.length); // navPoints.length = fondo de página
     if (idx === currentIdx && isNavigating) return;
     isNavigating = true;
     currentIdx   = idx;
-    document.getElementById(navPoints[idx])
-      .scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    if (idx === navPoints.length) {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    } else {
+      document.getElementById(navPoints[idx])
+        .scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 
     // Release guard when scroll animation ends (fallback: NAV_COOLDOWN)
     let released = false;
