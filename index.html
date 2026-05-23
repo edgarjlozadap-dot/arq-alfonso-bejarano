@@ -711,10 +711,35 @@
 
   <!-- THEME SWITCHER -->
   <div class="theme-switcher" id="themeSwitcher">
-    <button class="theme-btn active" data-theme="" data-label="Positivo"></button>
-    <button class="theme-btn" data-theme="negativo" data-label="Negativo"></button>
-    <button class="theme-btn" data-theme="bn" data-label="B &amp; N"></button>
-    <button class="theme-btn" data-theme="grises" data-label="Grises"></button>
+    <div class="theme-switcher-title">Variante</div>
+    <button class="theme-btn active" data-theme="">
+      <div class="theme-swatch">
+        <span style="background:#1A0A10"></span>
+        <span style="background:#F5EEE6"></span>
+      </div>
+      <span class="theme-name">Positivo</span>
+    </button>
+    <button class="theme-btn" data-theme="negativo">
+      <div class="theme-swatch">
+        <span style="background:#4A1528"></span>
+        <span style="background:#F5EEE6"></span>
+      </div>
+      <span class="theme-name">Negativo</span>
+    </button>
+    <button class="theme-btn" data-theme="bn">
+      <div class="theme-swatch">
+        <span style="background:#111111"></span>
+        <span style="background:#FFFFFF"></span>
+      </div>
+      <span class="theme-name">B &amp; N</span>
+    </button>
+    <button class="theme-btn" data-theme="grises">
+      <div class="theme-swatch">
+        <span style="background:#4A4242"></span>
+        <span style="background:#E8E0D8"></span>
+      </div>
+      <span class="theme-name">Grises</span>
+    </button>
   </div>
 
   <script src="main.js"></script>
