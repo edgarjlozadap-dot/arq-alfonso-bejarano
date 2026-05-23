@@ -306,7 +306,7 @@ body {
 .ayb-iso--grey  { filter: grayscale(1) brightness(1.2); }
 
 /* Usos incorrectos */
-.ayb-iso--wrong-color    { filter: hue-rotate(155deg) saturate(3) brightness(1.2); }
+.ayb-iso--wrong-color    { filter: sepia(1) hue-rotate(120deg) saturate(6) brightness(1.1); }
 .ayb-iso--wrong-shadow   { filter: drop-shadow(4px 6px 10px rgba(0,0,0,0.95)); }
 .ayb-iso--wrong-opacity  { opacity: 0.25; }
 .ayb-iso--wrong-gradient { position: relative; }
