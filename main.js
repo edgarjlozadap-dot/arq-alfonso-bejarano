@@ -19,12 +19,23 @@
   // ── REVEAL ON SCROLL ───────────────────────────────
   const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-scale');
 
+  function lockVisible(el) {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+    el.style.transition = 'none';
+    el.style.transitionDelay = '0s';
+  }
+
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
           revealObserver.unobserve(entry.target);
+
+          const delay    = parseFloat(getComputedStyle(entry.target).transitionDelay)    * 1000 || 0;
+          const duration = parseFloat(getComputedStyle(entry.target).transitionDuration) * 1000 || 900;
+          setTimeout(() => lockVisible(entry.target), delay + duration + 50);
         }
       });
     },
