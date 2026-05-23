@@ -22,19 +22,17 @@
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        } else {
-          const el = entry.target;
-          // Snap to hidden instantly (no exit transition) so the entrance
-          // animation always plays from the initial hidden state
-          el.style.transition = 'none';
-          el.classList.remove('visible');
-          // Two rAFs let the browser commit the snap before re-enabling transitions
-          requestAnimationFrame(() => requestAnimationFrame(() => {
-            el.style.transition = '';
-          }));
-        }
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        // 1. Disable transition and reset to hidden state
+        el.style.transition = 'none';
+        el.classList.remove('visible');
+        // 2. Reading offsetHeight forces the browser to flush and commit
+        //    the hidden state before we re-enable transitions
+        void el.offsetHeight;
+        // 3. Restore CSS transitions and animate in
+        el.style.transition = '';
+        el.classList.add('visible');
       });
     },
     { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
