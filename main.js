@@ -221,6 +221,8 @@
   document.getElementById('navArrowUp')
     .addEventListener('click', () => goToSection(0));
   document.getElementById('navArrowDown')
-    .addEventListener('click', () => goToSection(navPoints.length - 1));
+    .addEventListener('click', () => {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
 
 })();
