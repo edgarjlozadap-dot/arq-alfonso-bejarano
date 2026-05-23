@@ -1018,7 +1018,7 @@ body {
   padding: 20px;
   background: rgba(74,21,40,0.15);
   margin-bottom: 16px;
-  min-height: 100px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
