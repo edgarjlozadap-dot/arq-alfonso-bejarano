@@ -1054,7 +1054,6 @@ body {
 
 /* ── SECCIÓN 9 — AJUSTE PARA CABER EN UN VIEWPORT ──── */
 #incorrectos                    { padding: 50px 5vw; }
-#incorrectos .section-title     { font-size: clamp(1.6rem, 2.5vw, 2.8rem); }
 #incorrectos .section-header    { margin-bottom: 20px; }
 #incorrectos .section-intro     { margin-bottom: 16px; font-size: 0.9rem; }
 #incorrectos .incorrect-grid    { gap: 16px; }
