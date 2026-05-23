@@ -1395,6 +1395,21 @@ body {
   text-align: right;
 }
 
+/* ── SECCIÓN 10 — AJUSTE PARA CABER EN UN VIEWPORT ── */
+#aplicaciones { padding: 50px 5vw; }
+#aplicaciones .section-title   { font-size: clamp(1.6rem, 2.5vw, 2.8rem); }
+#aplicaciones .section-header  { margin-bottom: 14px; }
+#aplicaciones .section-intro   { margin-bottom: 14px; font-size: 0.9rem; }
+#aplicaciones .mockups-grid    { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+#aplicaciones .business-card   { max-width: 100%; }
+#aplicaciones .lh-body         { padding: 12px 16px; }
+#aplicaciones .lh-lines        { gap: 6px; }
+#aplicaciones .stamp-container { padding: 14px; }
+#aplicaciones .stamp-svg       { width: 120px; height: 120px; }
+#aplicaciones .sm-cover        { height: 72px; }
+#aplicaciones .sm-avatar       { width: 48px; height: 48px; margin-top: -24px; }
+#aplicaciones .sm-info         { padding: 6px 14px 10px; }
+
 /* ── RESPONSIVE ────────────────────────────────────── */
 @media (max-width: 640px) {
   .section { padding: 80px 4vw; }
