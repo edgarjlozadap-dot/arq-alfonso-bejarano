@@ -622,18 +622,22 @@
           <div class="stamp-container">
             <div class="stamp">
               <svg viewBox="0 0 200 200" class="stamp-svg">
+                <defs>
+                  <path id="arcBottom" d="M 22 100 A 78 78 0 0 1 178 100"/>
+                </defs>
                 <circle cx="100" cy="100" r="90" stroke="#4A1528" stroke-width="3" fill="none"/>
                 <circle cx="100" cy="100" r="78" stroke="#4A1528" stroke-width="1" fill="none"/>
-                <image href="assets/logo-dark.png" x="58" y="42" width="84" height="84"/>
-                <text x="100" y="110" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="8" font-weight="400" fill="#4A1528" letter-spacing="3">ARQ. ALFONSO</text>
-                <text x="100" y="125" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="8" font-weight="400" fill="#4A1528" letter-spacing="3">BEJARANO</text>
-                <path d="M 30 145 A 70 70 0 0 0 170 145" stroke="#4A1528" stroke-width="0.5" fill="none"/>
-                <text font-family="Montserrat, sans-serif" font-size="6.5" fill="#4A1528" letter-spacing="2">
-                  <textPath href="#arcBottom" startOffset="12%">ARQUITECTURA &amp; URBANISMO</textPath>
+                <!-- logo en mitad superior, sin tocar el texto -->
+                <image href="assets/logo-dark.png" x="68" y="22" width="64" height="64"/>
+                <!-- separador -->
+                <line x1="42" y1="94" x2="158" y2="94" stroke="#4A1528" stroke-width="0.5"/>
+                <!-- nombre claramente debajo del logo -->
+                <text x="100" y="109" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="7.5" font-weight="400" fill="#4A1528" letter-spacing="2.5">ARQ. ALFONSO</text>
+                <text x="100" y="123" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="7.5" font-weight="400" fill="#4A1528" letter-spacing="2.5">BEJARANO</text>
+                <!-- especialidad en arco inferior -->
+                <text text-anchor="middle" font-family="Montserrat, sans-serif" font-size="6.5" fill="#4A1528" letter-spacing="2">
+                  <textPath href="#arcBottom" startOffset="50%">ARQUITECTURA &amp; URBANISMO</textPath>
                 </text>
-                <defs>
-                  <path id="arcBottom" d="M 22 100 A 78 78 0 0 0 178 100"/>
-                </defs>
               </svg>
             </div>
           </div>
