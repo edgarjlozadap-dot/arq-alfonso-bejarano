@@ -469,6 +469,8 @@ body {
   gap: 6px;
 }
 
+.logo-full .ayb-iso { margin-left: -8px; }
+
 .logo-iso { width: 100%; max-width: 280px; }
 
 .logo-wordmark { display: flex; flex-direction: column; gap: 2px; }
