@@ -246,7 +246,7 @@ body {
 }
 
 .cover-logo {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   gap: 14px;
@@ -561,7 +561,7 @@ body {
   align-items: center;
 }
 
-.logo-on-grid svg { width: 200px; }
+.logo-on-grid img { width: 120px; height: auto; }
 
 .respect-area {
   position: absolute;
@@ -617,11 +617,12 @@ body {
 .rd-inner {
   padding: 16px 24px;
   border: 1.5px solid var(--burgundy);
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--burgundy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.rd-inner img { width: 60px; height: auto; }
 
 .rd-arrows {
   position: absolute;
