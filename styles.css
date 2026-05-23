@@ -841,8 +841,8 @@ body {
 .type-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
-  margin-bottom: 50px;
+  gap: 16px;
+  margin-bottom: 24px;
   position: relative; z-index: 1;
 }
 
@@ -851,7 +851,7 @@ body {
 .type-card {
   background: rgba(245,238,230,0.04);
   border: 1px solid rgba(245,238,230,0.1);
-  padding: 40px;
+  padding: 24px;
   transition: background 0.3s ease;
 }
 
@@ -859,7 +859,7 @@ body {
 
 .type-specimen {
   color: var(--ivory);
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   line-height: 1;
 }
 
@@ -877,14 +877,14 @@ body {
   font-size: 0.8rem;
   font-weight: 300;
   color: rgba(245,238,230,0.5);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .type-weights {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 16px;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 .type-weights span {
@@ -900,22 +900,22 @@ body {
   font-weight: 300;
   line-height: 1.7;
   color: rgba(245,238,230,0.6);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .type-sample {
   font-size: 0.9rem;
-  line-height: 1.8;
+  line-height: 1.6;
   color: rgba(245,238,230,0.4);
   border-top: 1px solid rgba(245,238,230,0.1);
-  padding-top: 16px;
+  padding-top: 10px;
   letter-spacing: 0.02em;
 }
 
 .type-hierarchy {
   background: rgba(245,238,230,0.04);
   border: 1px solid rgba(245,238,230,0.1);
-  padding: 40px;
+  padding: 24px;
   position: relative; z-index: 1;
 }
 
@@ -926,12 +926,12 @@ body {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--burgundy-light);
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .hierarchy-item {
   color: var(--ivory);
-  padding: 16px 0;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(245,238,230,0.08);
 }
 
