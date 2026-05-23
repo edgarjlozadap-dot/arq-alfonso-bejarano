@@ -424,7 +424,8 @@ body {
 @media (max-width: 768px) { .logo-showcase { grid-template-columns: 1fr; } }
 
 .logo-display {
-  background: var(--burgundy);
+  background: var(--black-brand);
+  border: 1px solid rgba(74,21,40,0.4);
   padding: 60px;
   display: flex;
   align-items: center;
@@ -699,7 +700,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(74,21,40,0.2);
+  background: var(--burgundy);
 }
 
 .size-preview svg { display: block; }
@@ -928,10 +929,10 @@ body {
   min-height: 160px;
 }
 
-.variant-bg--positivo { background: var(--ivory); border: 1px solid rgba(74,21,40,0.1); }
-.variant-bg--negativo { background: var(--burgundy); }
-.variant-bg--bn       { background: #FFFFFF; border: 1px solid #ddd; }
-.variant-bg--grises   { background: #E0DADA; }
+.variant-bg--positivo { background: var(--ivory);      border: 1px solid rgba(74,21,40,0.15); }
+.variant-bg--negativo { background: var(--burgundy);   }
+.variant-bg--bn       { background: #FFFFFF;           border: 1px solid #ddd; }
+.variant-bg--grises   { background: #C8C0C0;           }
 
 .variant-logo {
   display: flex;
@@ -1187,8 +1188,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 30px;
-  background: var(--white);
-  border: 1px solid rgba(74,21,40,0.1);
+  background: #FFFFFF;
+  border: 1px solid rgba(74,21,40,0.15);
 }
 
 .stamp { position: relative; }
@@ -1223,7 +1224,7 @@ body {
 .sm-avatar {
   width: 64px; height: 64px;
   border-radius: 50%;
-  background: var(--black-brand);
+  background: var(--burgundy);
   border: 3px solid var(--white);
   position: relative;
   margin: -32px 0 0 20px;
@@ -1310,7 +1311,7 @@ body {
 .helmet-dome {
   width: 200px;
   height: 110px;
-  background: var(--ivory);
+  background: #F0E8DC;
   border-radius: 100px 100px 0 0;
   border: 2px solid rgba(74,21,40,0.15);
   display: flex;
