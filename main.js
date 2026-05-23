@@ -217,4 +217,10 @@
 
   sections.forEach((s) => keyObserver.observe(s));
 
+  // ── NAV ARROWS (inicio / final) ────────────────────
+  document.getElementById('navArrowUp')
+    .addEventListener('click', () => goToSection(0));
+  document.getElementById('navArrowDown')
+    .addEventListener('click', () => goToSection(navPoints.length - 1));
+
 })();

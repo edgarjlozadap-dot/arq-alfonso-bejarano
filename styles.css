@@ -97,6 +97,26 @@ body {
   transform: scale(1.3);
 }
 
+.nav-arrow {
+  width: 20px; height: 20px;
+  background: none;
+  border: 1.5px solid rgba(245,238,230,0.25);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(245,238,230,0.45);
+  padding: 0;
+  transition: border-color 0.3s, color 0.3s, transform 0.3s;
+  align-self: center;
+}
+.nav-arrow:hover {
+  border-color: var(--burgundy);
+  color: var(--burgundy);
+  transform: scale(1.15);
+}
+
 /* ── SECTIONS ──────────────────────────────────────── */
 .section {
   min-height: 100vh;
