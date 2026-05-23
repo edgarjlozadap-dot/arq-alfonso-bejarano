@@ -161,7 +161,12 @@
 
   // ── SECTION NAVIGATION (scroll · keyboard · touch) ─
   const sectionIds  = Array.from(sections).map((s) => s.id);
-  const navPoints   = sectionIds.slice();
+  // navPoints adds an extra stop inside #tipografia to reveal the hierarchy block
+  const navPoints   = sectionIds.reduce((acc, id) => {
+    acc.push(id);
+    if (id === 'tipografia') acc.push('tipografia-p2');
+    return acc;
+  }, []);
   let currentIdx    = 0;
   let isNavigating  = false;
   const NAV_COOLDOWN = 900; // ms — match smooth-scroll duration
