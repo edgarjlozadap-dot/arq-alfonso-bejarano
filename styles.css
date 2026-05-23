@@ -1557,6 +1557,11 @@ body[data-theme="grises"] {
   --gray-soft:      #D8D0C8;
 }
 
+/* ── BANNER LOGO — VARIANTE POR TEMA ────────────────── */
+/* default/negativo: logo-white.png sobre fondo oscuro = variante negativa ✓ */
+body[data-theme="bn"]     .section--cover .ayb-iso--xl { filter: grayscale(1); }
+body[data-theme="grises"] .section--cover .ayb-iso--xl { filter: grayscale(1) brightness(0.75); }
+
 /* ── RESPONSIVE ── 1024px ───────────────────────────── */
 @media (max-width: 1024px) {
   #aplicaciones .mockups-grid  { grid-template-columns: repeat(2, 1fr); gap: 20px; }
