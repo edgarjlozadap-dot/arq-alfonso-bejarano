@@ -1558,13 +1558,19 @@ body[data-theme="grises"] {
 }
 
 /* ── BANNER LOGO — VARIANTE POR TEMA ────────────────── */
-/* positivo (default): logo-dark.png amplificado → color borgoña visible sobre fondo oscuro */
-.section--cover .ayb-iso--xl                          { filter: brightness(2.2); }
-/* negativo: convertir logo oscuro a blanco puro */
+/* positivo (default): recuadro blanco + logo en su color borgoña natural */
+body:not([data-theme]) .section--cover .ayb-iso--xl,
+body[data-theme=""]    .section--cover .ayb-iso--xl {
+  filter: none;
+  background: #F5EEE6;
+  padding: 24px;
+  border-radius: 4px;
+}
+/* negativo: logo blanco puro */
 body[data-theme="negativo"] .section--cover .ayb-iso--xl { filter: brightness(0) invert(1); }
-/* B&N: blanco puro en escala de grises */
+/* B&N: logo blanco en escala de grises */
 body[data-theme="bn"]       .section--cover .ayb-iso--xl { filter: grayscale(1) brightness(0) invert(1); }
-/* grises: gris visible sobre fondo oscuro */
+/* grises: logo gris visible */
 body[data-theme="grises"]   .section--cover .ayb-iso--xl { filter: grayscale(1) brightness(2); }
 
 /* ── RESPONSIVE ── 1024px ───────────────────────────── */
