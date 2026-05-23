@@ -254,17 +254,17 @@ body {
 
 /* ── ISOTIPO REAL (PDF) ────────────────────────────── */
 .ayb-iso {
-  background: url('assets/page_0.png') 50% 33.7% / 800% no-repeat;
   display: block;
   flex-shrink: 0;
+  object-fit: contain;
 }
-.ayb-iso--xl  { width: clamp(200px, 28vw, 300px); height: clamp(200px, 28vw, 300px); }
-.ayb-iso--lg  { width: 200px; height: 200px; }
-.ayb-iso--md  { width: 130px; height: 130px; }
-.ayb-iso--sm  { width: 80px;  height: 80px;  }
-.ayb-iso--xs  { width: 55px;  height: 55px;  }
-.ayb-iso--xxs { width: 40px;  height: 40px;  }
-.ayb-iso--avatar { width: 70px; height: 70px; }
+.ayb-iso--xl     { width: clamp(180px, 26vw, 280px); height: auto; }
+.ayb-iso--lg     { width: 200px; height: auto; }
+.ayb-iso--md     { width: 130px; height: auto; }
+.ayb-iso--sm     { width: 80px;  height: auto; }
+.ayb-iso--xs     { width: 55px;  height: auto; }
+.ayb-iso--xxs    { width: 40px;  height: auto; }
+.ayb-iso--avatar { width: 70px;  height: auto; }
 
 /* Variantes con filtros CSS */
 .ayb-iso--pos   { filter: invert(1) sepia(0.3) hue-rotate(180deg) saturate(0.4) brightness(1.1); }
