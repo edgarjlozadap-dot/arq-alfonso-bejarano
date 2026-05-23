@@ -259,7 +259,7 @@ body {
   object-fit: contain;
 }
 /* banner principal */
-.ayb-iso--xl     { width: clamp(55px, 7vw, 80px); height: auto; }
+.ayb-iso--xl     { width: clamp(61px, 7.7vw, 88px); height: auto; }
 /* sección logotipo */
 .ayb-iso--lg     { width: 65px;  height: auto; }
 /* variantes y tamaños */
