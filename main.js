@@ -86,6 +86,18 @@
   }
 
   // ── SCROLL LISTENER ────────────────────────────────
+  const arrowUp   = document.getElementById('navArrowUp');
+  const arrowDown = document.getElementById('navArrowDown');
+
+  function updateArrows() {
+    const atTop    = window.scrollY <= 10;
+    const atBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 10;
+    arrowUp.style.opacity        = atTop    ? '0' : '';
+    arrowUp.style.pointerEvents  = atTop    ? 'none' : '';
+    arrowDown.style.opacity      = atBottom ? '0' : '';
+    arrowDown.style.pointerEvents = atBottom ? 'none' : '';
+  }
+
   let ticking = false;
 
   window.addEventListener('scroll', () => {
@@ -93,11 +105,14 @@
       requestAnimationFrame(() => {
         updateProgress();
         parallax();
+        updateArrows();
         ticking = false;
       });
       ticking = true;
     }
   }, { passive: true });
+
+  updateArrows();
 
   // ── COVER ANIMATION ON LOAD ────────────────────────
   window.addEventListener('load', () => {

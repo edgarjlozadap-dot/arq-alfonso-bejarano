@@ -109,7 +109,7 @@ body {
   justify-content: center;
   color: var(--gray-mid);
   padding: 0;
-  transition: border-color 0.3s, color 0.3s, transform 0.3s;
+  transition: border-color 0.3s, color 0.3s, transform 0.3s, opacity 0.3s;
   align-self: center;
 }
 .nav-arrow:hover {
