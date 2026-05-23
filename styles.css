@@ -119,7 +119,7 @@ body {
 
 .section-label {
   position: absolute;
-  bottom: -0.15em; right: 10vw;
+  bottom: -0.15em; right: 5vw;
   font-family: var(--font-serif);
   font-size: clamp(5rem, 12vw, 14rem);
   font-weight: 600;
