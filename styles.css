@@ -259,19 +259,19 @@ body {
   object-fit: contain;
 }
 /* banner principal */
-.ayb-iso--xl     { width: clamp(100px, 14vw, 160px); height: auto; }
+.ayb-iso--xl     { width: clamp(55px, 7vw, 80px); height: auto; }
 /* sección logotipo */
-.ayb-iso--lg     { width: 110px; height: auto; }
+.ayb-iso--lg     { width: 65px;  height: auto; }
 /* variantes y tamaños */
-.ayb-iso--md     { width: 80px;  height: auto; }
+.ayb-iso--md     { width: 50px;  height: auto; }
 /* usos incorrectos y footer */
-.ayb-iso--sm     { width: 52px;  height: auto; }
+.ayb-iso--sm     { width: 34px;  height: auto; }
 /* mockup tarjeta / casco */
-.ayb-iso--xs     { width: 38px;  height: auto; }
+.ayb-iso--xs     { width: 24px;  height: auto; }
 /* membrete / sobre */
-.ayb-iso--xxs    { width: 28px;  height: auto; }
+.ayb-iso--xxs    { width: 18px;  height: auto; }
 /* avatar redes */
-.ayb-iso--avatar { width: 50px;  height: auto; }
+.ayb-iso--avatar { width: 34px;  height: auto; }
 
 /* Variantes con filtros CSS */
 .ayb-iso--pos   { filter: invert(1) sepia(0.3) hue-rotate(180deg) saturate(0.4) brightness(1.1); }
