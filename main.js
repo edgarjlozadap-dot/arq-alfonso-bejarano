@@ -25,7 +25,15 @@
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         } else {
-          entry.target.classList.remove('visible');
+          const el = entry.target;
+          // Snap to hidden instantly (no exit transition) so the entrance
+          // animation always plays from the initial hidden state
+          el.style.transition = 'none';
+          el.classList.remove('visible');
+          // Two rAFs let the browser commit the snap before re-enabling transitions
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            el.style.transition = '';
+          }));
         }
       });
     },
