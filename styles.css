@@ -1416,8 +1416,8 @@ body {
   text-align: right;
 }
 
-/* ── SECCIÓN 7 ───────────────────────────────────── */
-#tipografia           { padding-top: 60px; padding-bottom: 60px; }
+/* ── SECCIÓN 7 — dos scrolls ─────────────────────── */
+#tipografia           { min-height: calc(200vh + 20px); align-items: flex-start; padding-top: 60px; padding-bottom: 60px; }
 #tipografia .type-grid { gap: 8px; margin-bottom: 12px; }
 
 /* ── SECCIÓN 10 — AJUSTE PARA CABER EN UN VIEWPORT ── */
