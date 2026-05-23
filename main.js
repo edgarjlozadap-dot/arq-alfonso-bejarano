@@ -157,7 +157,12 @@
     currentIdx   = idx;
     document.getElementById(sectionIds[idx])
       .scrollIntoView({ behavior: 'smooth', block: 'start' });
-    setTimeout(() => { isNavigating = false; }, NAV_COOLDOWN);
+
+    // Release guard when scroll animation ends (fallback: NAV_COOLDOWN)
+    let released = false;
+    const release = () => { if (!released) { released = true; isNavigating = false; } };
+    window.addEventListener('scrollend', release, { once: true });
+    setTimeout(release, NAV_COOLDOWN);
   }
 
   // Keyboard
