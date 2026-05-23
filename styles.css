@@ -1417,8 +1417,8 @@ body {
 }
 
 /* ── SECCIÓN 7 — DOS PANTALLAS (dos scrolls) ─────── */
-#tipografia           { min-height: calc(200vh + 20px); align-items: flex-start; }
-#tipografia .type-grid { min-height: calc(100vh - 200px); align-content: center; }
+#tipografia           { min-height: calc(200vh + 20px); align-items: flex-start; padding-top: 60px; padding-bottom: 60px; }
+#tipografia .type-grid { min-height: calc(100vh - 260px); align-content: center; gap: 8px; margin-bottom: 12px; }
 #tipografia-p2        { position: absolute; top: calc(100vh - 100px); left: 0; width: 100%; height: 0; pointer-events: none; }
 
 /* ── SECCIÓN 10 — AJUSTE PARA CABER EN UN VIEWPORT ── */
