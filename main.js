@@ -240,6 +240,16 @@
 
   sections.forEach((s) => keyObserver.observe(s));
 
+  // ── THEME SWITCHER ─────────────────────────────────
+  document.querySelectorAll('.theme-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const theme = btn.dataset.theme;
+      document.body.dataset.theme = theme;
+      document.querySelectorAll('.theme-btn').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
   // ── NAV ARROWS (inicio / final) ────────────────────
   document.getElementById('navArrowUp')
     .addEventListener('click', () => goToSection(0));
