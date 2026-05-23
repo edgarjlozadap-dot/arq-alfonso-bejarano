@@ -1053,16 +1053,16 @@ body {
 }
 
 /* ── SECCIÓN 9 — AJUSTE PARA CABER EN UN VIEWPORT ──── */
-#incorrectos                    { padding: 24px 5vw; }
-#incorrectos .section-title     { font-size: clamp(1.2rem, 1.8vw, 1.7rem); }
-#incorrectos .section-header    { margin-bottom: 8px; }
-#incorrectos .title-line        { margin-top: 8px; }
-#incorrectos .section-intro     { margin-bottom: 8px; font-size: 0.78rem; line-height: 1.4; }
-#incorrectos .incorrect-grid    { grid-template-columns: repeat(3, 1fr); gap: 10px; }
-#incorrectos .incorrect-card    { padding: 8px; }
-#incorrectos .incorrect-visual  { height: 62px; margin-bottom: 6px; padding: 8px; }
-#incorrectos .incorrect-card p  { font-size: 0.68rem; line-height: 1.35; }
-#incorrectos .incorrect-badge   { width: 16px; height: 16px; font-size: 0.55rem; top: 4px; right: 4px; }
+#incorrectos                    { padding: 36px 5vw; }
+#incorrectos .section-title     { font-size: clamp(1.3rem, 2vw, 2rem); }
+#incorrectos .section-header    { margin-bottom: 12px; }
+#incorrectos .title-line        { margin-top: 10px; }
+#incorrectos .section-intro     { margin-bottom: 10px; font-size: 0.82rem; line-height: 1.5; }
+#incorrectos .incorrect-grid    { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+#incorrectos .incorrect-card    { padding: 10px; }
+#incorrectos .incorrect-visual  { height: 72px; margin-bottom: 8px; padding: 10px; }
+#incorrectos .incorrect-card p  { font-size: 0.72rem; line-height: 1.4; }
+#incorrectos .incorrect-badge   { width: 18px; height: 18px; font-size: 0.6rem; top: 5px; right: 5px; }
 
 /* ══════════════════════════════════════════════════════
    SECCIÓN 10 — APLICACIONES
