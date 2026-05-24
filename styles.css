@@ -1568,8 +1568,8 @@ body:not([data-theme]) .section--cover .ayb-iso--xl,
 body[data-theme=""]    .section--cover .ayb-iso--xl { filter: none; }
 /* negativo: logo blanco puro, sin recuadro */
 body[data-theme="negativo"] .section--cover .ayb-iso--xl { filter: brightness(0) invert(1); background: none; padding: 0; border-radius: 0; }
-/* B&N: logo blanco en escala de grises */
-body[data-theme="bn"]       .section--cover .ayb-iso--xl { filter: grayscale(1) brightness(0) invert(1); }
+/* B&N: logo negro, sin recuadro */
+body[data-theme="bn"]       .section--cover .ayb-iso--xl { filter: grayscale(1) brightness(0) invert(1); background: none; padding: 0; border-radius: 0; }
 /* grises: logo gris visible */
 body[data-theme="grises"]   .section--cover .ayb-iso--xl { filter: grayscale(1) brightness(2); }
 
