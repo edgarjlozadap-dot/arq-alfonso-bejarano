@@ -1559,7 +1559,7 @@ body[data-theme="grises"] {
 
 /* ── BANNER LOGO — VARIANTE POR TEMA ────────────────── */
 .section--cover .ayb-iso--xl {
-  background: #F5EEE6;
+  background: #FFFFFF;
   padding: 24px;
   border-radius: 4px;
 }
@@ -1569,7 +1569,7 @@ body[data-theme=""]    .section--cover .ayb-iso--xl { filter: none; }
 /* negativo: logo blanco puro, sin recuadro */
 body[data-theme="negativo"] .section--cover .ayb-iso--xl { filter: brightness(0) invert(1); background: none; padding: 0; border-radius: 0; }
 /* B&N: logo negro, sin recuadro */
-body[data-theme="bn"]       .section--cover .ayb-iso--xl { filter: brightness(0); background: #F5EEE6; padding: 24px; border-radius: 4px; }
+body[data-theme="bn"]       .section--cover .ayb-iso--xl { filter: brightness(0); background: #FFFFFF; padding: 24px; border-radius: 4px; }
 /* grises: logo gris visible */
 body[data-theme="grises"]   .section--cover .ayb-iso--xl { filter: grayscale(1) brightness(2); }
 
